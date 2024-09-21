@@ -37,6 +37,9 @@ import Gynecologist from '../assets/assets_frontend/Gynecologist.svg'
 import Neurologist from '../assets/assets_frontend/Neurologist.svg'
 import Pediatricians from '../assets/assets_frontend/Pediatricians.svg'
 
+// export const url = "http://localhost:5000"
+
+export const url = ""
 
 export const assets = {
     appointment_img,
