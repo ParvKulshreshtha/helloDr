@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { url } from '../data/assets';
 
 const LoginPage = () => {
@@ -45,6 +45,7 @@ const LoginPage = () => {
                   required
                   className="p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
+              <Link to={'/signup'}>signup</Link>
               <button type="submit"
               className="bg-blue-500 text-white p-3 rounded hover:bg-blue-600 transition duration-200">Login</button>
           </form>
