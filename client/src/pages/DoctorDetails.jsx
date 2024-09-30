@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { doctors } from '../data/assets'
+import { doctors, url } from '../data/assets'
 import { useParams } from 'react-router-dom'
 import moment from "moment"
 import axios from 'axios';
@@ -52,7 +52,7 @@ const DoctorDetails = ({user}) => {
       bookingAt:date
     }
 
-    const booking = await axios.post("http://localhost:5000/appointment/create", bookingDetails)
+    const booking = await axios.post(`${url}/appointment/create`, bookingDetails)
     console.log(bookingDetails)
   }
 

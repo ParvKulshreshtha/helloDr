@@ -1,5 +1,5 @@
 const User = require('../Models/User');
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
 // Create a user
@@ -66,9 +66,12 @@ const login = async(req, res) => {
 
         // Find user by email
         const user = await User.findOne({ email });
+
+        console.log("ggg",user)
         
         // Check if user exists and password matches
         if (!user) {
+
             return res.status(401).json({ message: 'Invalid credentials' });
         }
 

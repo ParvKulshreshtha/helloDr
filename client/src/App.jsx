@@ -12,6 +12,7 @@ import Nav from './components/Nav';
 import Footer from './components/Footer';
 import DoctorDetails from './pages/DoctorDetails';
 import axios from 'axios';
+import { url } from './data/assets';
 
 export default function App() {
   const [token, setToken] = useState("")
@@ -29,7 +30,7 @@ export default function App() {
   const getUser = async (token) => {
     console.log("Token:", token);
     try {
-        const response = await axios.get("http://localhost:5000/users/getuserbytoken", {
+        const response = await axios.get(`${url}/users/getuserbytoken`, {
             headers: {
                 Authorization: `Bearer ${token}`, 
             },

@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import { url } from '../data/assets';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -11,7 +12,7 @@ const LoginPage = () => {
   const handleLogin = async (e) => {
       e.preventDefault();
       try {
-          const response = await axios.post('http://localhost:5000/users/login', { email, password });
+          const response = await axios.post(`${url}/users/login`, { email, password });
           localStorage.setItem('token', response.data.token); 
           console.log(response.data.user)
           navigate('/')

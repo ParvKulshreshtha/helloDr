@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { doctors } from '../data/assets';
+import { doctors, url } from '../data/assets';
 
 const MyAppointments = ({ user }) => {
   const [appointments, setAppointments] = useState([]);
@@ -15,7 +15,7 @@ const MyAppointments = ({ user }) => {
 
   const getAppointments = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/appointment/get/${user._id}`);
+      const response = await axios.get(`${url}/appointment/get/${user._id}`);
       setAppointments(response.data);
     } catch (error) {
       console.error("Error fetching appointments:", error);

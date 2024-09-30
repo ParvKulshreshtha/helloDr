@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { url } from '../data/assets';
 
 const Signup = () => {
     const [name, setName] = useState('');
@@ -13,7 +14,7 @@ const Signup = () => {
     const handleSignup = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/users/signup', { name, email, password });
+            const response = await axios.post(`${url}/users/signup`, { name, email, password });
             navigate('/login')
             setError('')
             // Handle successful signup (e.g., redirect to login)

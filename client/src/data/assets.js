@@ -39,7 +39,7 @@ import Pediatricians from '../assets/assets_frontend/Pediatricians.svg'
 
 // export const url = "http://localhost:5000"
 
-export const url = ""
+export const url = "https://hello-dr.vercel.app/"
 
 export const assets = {
     appointment_img,
