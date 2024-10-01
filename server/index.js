@@ -13,7 +13,13 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // cors
-app.use(cors())
+app.use(cors(
+    {
+        origin:"https://hello-dr-app.vercel.app",
+        methods:["POST", "GET"],
+        credentials:true
+    }
+))
 // Middleware to parse JSON requests
 app.use(express.json());
 
