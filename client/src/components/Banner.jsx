@@ -5,7 +5,7 @@ import header_img from '../assets/assets_frontend/header_img.png';
 
 const Header = () => {
   return (
-    <div className="flex flex-col lg:flex-row items-end justify-between px-16 bg-[#5F6FFF] w-10/12 mx-auto m-2 rounded-3xl">
+    <div className="flex flex-col lg:flex-row items-end justify-between px-16 bg-[#5F6FFF] lg:w-10/12 mx-auto m-2 lg:rounded-3xl">
       {/*  ---------Left Side ------  */}
       <div className="md:w-1/2 flex flex-col items-start justify-center gap-4 py-10 m-auto md:py-[10vw] md:mb-[-30px]">
         <p className="text-4xl font-bold text-white mb-4">
@@ -27,7 +27,7 @@ const Header = () => {
       </div>
       
       {/*  ---------Right Side ------  */}
-      <div className="md:w-1/2 relative">
+      <div className="md:w-1/2 relative hidden lg:block">
         <img src={header_img} alt="two lady doctors in headers" className=" md:absolute  bottom-0 sm:block"/>
       </div>
     </div>
